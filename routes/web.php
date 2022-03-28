@@ -8,6 +8,9 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserPostController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostLikeController;
+use App\Http\Controllers\CommentLikeController;
+use App\Http\Controllers\PostCommentController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +47,18 @@ Route::get('/posts/{post}/edit', [PostController::class, 'editPost'])->name('pos
 Route::post('/posts/{post}', [PostController::class, 'updatePost'])->name('posts.update');
 
 
+Route::post('/comments/{post}', [PostCommentController::class, 'store'])->name('comments.store');
+Route::get('/comments/show/{post}', [PostCommentController::class, 'show'])->name('comments.show');
+Route::delete('/comments/{comment}', [PostCommentController::class, 'destroy'])->name('comments.destroy');
+
+
 Route::post('/posts/{post}/likes', [PostLikeController::class, 'store'])->name('posts.likes');
 Route::delete('/posts/{post}/likes', [PostLikeController::class, 'destroy'])->name('posts.likes');
+
+Route::post('/comments/{comment}/likes', [CommentLikeController::class, 'store'])->name('comments.likes');
+Route::delete('/comments/{comment}/likes', [CommentLikeController::class, 'destroy'])->name('comments.likes');
+
+
+
 
 

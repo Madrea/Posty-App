@@ -1,0 +1,67 @@
+
+.textarea{
+    background-color: rgb(243 244 246);
+    width: 100%;
+    border-width: 2px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .textarea:focus{
+    outline: none !important;
+    border-color: rgb(20, 70, 150);
+  }
+  
+  .textarea-error{
+    background-color: rgb(243 244 246);
+    width: 100%;
+    border-width: 2px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-color: rgb(239 68 68);
+  }
+  
+  .txt-image-div{
+    display: flex;
+  }
+  
+  .image-button{
+    background-color: rgb(59 130 246);
+    width: 6%;
+    height: 128px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    padding-top: 40px;
+    border-radius: 0.5rem;
+    color: white;
+  }
+  
+  .image-button:hover{
+    background-color: rgb(20, 70, 150);
+  }
+  
+  .submit-button{
+    background-color: rgb(59 130 246);
+    color:white;
+    padding-left: 1rem; /* 16px */
+    padding-right: 1rem; /* 16px */
+    padding-top: 0.875rem; /* 14px */
+    padding-bottom: 0.875rem; /* 14px */
+    border-radius: 0.25rem;
+    font-size: medium;
+  }
+  
+  .submit-button:hover{
+    background-color: rgb(20, 70, 150);
+  }
+  
+  .image{
+    max-width: 400px;
+    max-height: 400px;
+  }
+  
+  .image-div{
+    max-width: 100%;
+    max-height: 400px;
+  }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
@@ -20,21 +21,24 @@ class PostController extends Controller
       // $posts = Post::get();  returneaza o colectie de tip post
        $posts = Post::latest()->with(['user', 'likes'])->paginate(20);   //returneaza x postari 
 
+
        return view('posts.index', [
-           'posts' => $posts
+           'posts' => $posts,
         ]); 
     }
 
     public function show(Post $post)
     {
+        $comments = Comment::latest()->where('post_id', $post->id)->paginate(10);  
+
         return view('posts.show', [
-            'post' => $post
+            'post' => $post, 
+            'comments' => $comments,
         ]);
     }
 
     public function store(Request $request)
     {
-
 
         $this->validate($request, [
             'body' => 'required',
@@ -98,4 +102,7 @@ class PostController extends Controller
         return redirect('/posts');
 
     }
+
+    
+
 }

@@ -443,7 +443,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .section-div-2{
-  background-color: white;
+  background-color: rgb(207, 218, 252);
   padding: 1.5rem;;
   width: 66.666667%;
   min-height: 100px;
@@ -624,7 +624,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .image{
-  max-width: 400px;
+  /* max-width: 400px; */
+  max-width: 100%;
   max-height: 400px;
 }
 
@@ -696,6 +697,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 10px;
 }
 
+.button-edit{
+  color: rgb(59 130 246);
+  border:none;
+  outline:none;
+}
+
+.button-edit:hover{
+  color: rgb(20, 70, 150);
+  text-decoration: underline;
+}
+.button-edit:focus{
+  border:none;
+  outline: none;
+}
+
 /**********/
 
 
@@ -728,3 +744,101 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 /************/
+
+
+/*CSS Coment */
+
+.main-div-comment{
+  display: block;
+}
+
+.comments-wrapper{
+  display: none;
+}
+
+.comments-div{
+
+}
+
+.comment-div{
+  background-color:rgb(224, 228, 238);
+  border-radius: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.comment-name{
+  font-weight: 500;
+}
+
+.comment-date{
+  color: rgb(196, 199, 36);
+}
+
+.comment-top{
+  display: flex;
+  height: 20px;
+}
+
+.comment-buttons{
+  display: flex;
+  justify-content:space-between;
+  padding-top: 0px;
+  margin-bottom: 25px;
+  margin-top: 0px;
+}
+
+.comment-body{
+  background-color: rgb(243 244 246);
+  width: 100%;
+  height: 70px;
+  border-width: 2px;
+  /* padding: 1rem; */
+  border-radius: 0.5rem;
+}
+
+.comment-body:focus{
+  outline: none !important;
+  border-color: rgb(20, 70, 150);
+}
+
+.comment-body-error{
+  background-color: rgb(243 244 246);
+  width: 100%;
+  border-width: 2px;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-color: rgb(239 68 68);
+}
+
+.comment-body::-webkit-scrollbar {
+  display: none;
+}
+
+.post-comment{
+  color: white;
+  background-color:rgb(59 130 246);
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.post-comment:hover{
+  background-color:rgb(20, 70, 150);
+}
+/*************/
+
+
+.dropdown-item{
+  color:rgb(59 130 246);
+}
+
+.dropdown-item:hover{
+  color: rgb(20, 70, 150);
+}
+
+.make-comment{
+  display: flex;
+  width: 100%;
+}
+
